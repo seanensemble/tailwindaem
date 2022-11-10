@@ -45,7 +45,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.scss$/,
+                test: /\.css$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
@@ -63,9 +63,6 @@ module.exports = {
                                 ];
                             }
                         }
-                    },
-                    {
-                        loader: 'sass-loader',
                     },
                     {
                         loader: 'glob-import-loader',
