@@ -77,7 +77,10 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new ESLintPlugin({
-            extensions: ['js', 'ts', 'tsx']
+            extensions: ['js', 'ts', 'tsx'],
+            exclude: [
+                `/node_modules/`,
+            ],
         }),
         new MiniCssExtractPlugin({
             filename: 'clientlib-[name]/[name].css'
