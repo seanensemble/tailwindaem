@@ -1,4 +1,6 @@
 .cmp-image {}
 .cmp-image__link {}
-.cmp-image__image {}
+.cmp-image__image {
+     @apply opacity-50;
+}
 .cmp-image__title {}
