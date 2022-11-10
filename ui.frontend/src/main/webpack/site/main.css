@@ -1,4 +1,4 @@
 /*@import 'base';*/
 @import '_base.css';
-@import '../components/**/*.css';
-@import './styles/**/*.css';
+/*@import '../components!**!*.css';*/
+/*@import './styles!**!*.css';*/

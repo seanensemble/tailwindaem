@@ -46,31 +46,32 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            url: false
-                        }
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins() {
-                                return [
-                                    require('autoprefixer')
-                                ];
-                            }
-                        }
-                    },
-                    {
-                        loader: 'glob-import-loader',
-                        options: {
-                            resolve: resolve
-                        }
-                    }
-                ]
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+                // use: [
+                //     MiniCssExtractPlugin.loader,
+                //     {
+                //         loader: 'css-loader',
+                //         options: {
+                //             url: false
+                //         }
+                //     },
+                //     {
+                //         loader: 'postcss-loader',
+                //         options: {
+                //             plugins() {
+                //                 return [
+                //                     require('autoprefixer')
+                //                 ];
+                //             }
+                //         }
+                //     },
+                //     {
+                //         loader: 'glob-import-loader',
+                //         options: {
+                //             resolve: resolve
+                //         }
+                //     }
+                // ]
             }
         ]
     },
