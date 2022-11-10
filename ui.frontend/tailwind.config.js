@@ -6,6 +6,7 @@ module.exports = {
     standardFontWeights: true
   },
   purge: [],
+  content: ["./src/**/*.{html,js}", "../ui.apps/src/**/*.{html,js}"],
   theme: {
     extend: {}
   },
