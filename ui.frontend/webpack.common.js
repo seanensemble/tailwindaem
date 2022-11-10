@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TSConfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -57,11 +58,16 @@ module.exports = {
                     },
                     {
                         loader: 'postcss-loader',
+                        // options: {
+                        //     plugins() {
+                        //         return [
+                        //             require('autoprefixer')
+                        //         ];
+                        //     }
+                        // }
                         options: {
-                            plugins() {
-                                return [
-                                    require('autoprefixer')
-                                ];
+                            postcssOptions: {
+                                plugins: [require('autoprefixer')]
                             }
                         }
                     },
@@ -77,9 +83,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new ESLintPlugin({
-            extensions: ['js', 'ts', 'tsx']
-        }),
+        new webpack.NoEmitOnErrorsPlugin(),
         new MiniCssExtractPlugin({
             filename: 'clientlib-[name]/[name].css'
         }),
