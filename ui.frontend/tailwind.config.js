@@ -17,7 +17,7 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}", "../ui.apps/src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}", "../ui.apps/src/main/content/jcr_root/apps/tailwindaem/components/**/*.{html,js}"],
   theme: {
     extend: {},
   },
