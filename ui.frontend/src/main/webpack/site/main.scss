@@ -1,6 +1,6 @@
 
 @import 'variables';
-@import 'base';
+@import '_base';
 @import '../components/**/*.scss';
 @import './styles/*.scss';
-@import '~tailwindcss/tailwind.css';
+// @import '~tailwindcss/tailwind.css';
