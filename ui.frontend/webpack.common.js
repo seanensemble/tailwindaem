@@ -16,9 +16,6 @@ const resolve = {
     })]
 };
 
-
-const SEAN_USE = [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'];
-
 module.exports = {
     resolve: resolve,
     entry: {
@@ -47,48 +44,8 @@ module.exports = {
                     }
                 ]
             },
-            // {
-            //     test: /\.css$/i,
-            //     use: [
-            //         MiniCssExtractPlugin.loader,
-            //         {
-            //             loader: 'css-loader',
-            //             options: {
-            //                 url: false
-            //             }
-            //         },
-            //         {
-            //             loader: 'postcss-loader',
-            //             options: {
-            //                 postcssOptions: {
-            //                     plugins: [require('autoprefixer')]
-            //                 }
-            //             }
-            //         },
-            //         {
-            //             loader: 'glob-import-loader',
-            //             options: {
-            //                 resolve: resolve
-            //             }
-            //         }
-            //     ]
-            //     // use: SEAN_USE
-            // },
             {
-                // test: /\.scss$/,
                 test: /\.(sc|sa|c)ss$/,
-                // use: [
-                //     MiniCssExtractPlugin.loader,
-                //     "css-loader",
-                //     "postcss-loader",
-                //     "sass-loader",
-                //     {
-                //         loader: 'glob-import-loader',
-                //         options: {
-                //             resolve: resolve
-                //         }
-                //     }
-                //   ],
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
@@ -115,8 +72,6 @@ module.exports = {
                         }
                     }
                 ]
-
-                // use: SEAN_USE
             },
 
         ]

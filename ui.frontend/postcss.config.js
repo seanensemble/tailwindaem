@@ -11,16 +11,3 @@ module.exports = {
     require('postcss-nested'),
   ]
 }
-
-
-// module.exports = {
-//   plugins: {
-//       'postcss-easy-import': {prefix: '_'},
-//       'tailwindcss': {},
-//       'autoprefixer': {},
-//       'postcss-each': {},
-//       'postcss-inline-svg': {},
-//       'postcss-extend': {},
-//       'postcss-nested': {},
-//   }
-// };
